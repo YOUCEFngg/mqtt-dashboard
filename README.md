@@ -175,6 +175,4 @@ topics:
 | TCP sockets | Custom MQTT broker implementation |
 | Binary protocols | MQTT packet parsing |
 
-## License
 
-MIT
