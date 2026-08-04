@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT Live Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="icon">📡</span>
+                <h1>MQTT Live Dashboard</h1>
+            </div>
+            <div class="connection-status">
+                <span id="status-dot" class="dot disconnected"></span>
+                <span id="status-text">Disconnected</span>
+            </div>
+        </header>
+
+        <!-- Broker Info -->
+        <div class="info-bar">
+            <div class="info-item">
+                <span class="label">Broker:</span>
+                <span class="value">broker.hivemq.com</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Base Topic:</span>
+                <span class="value">rmbtech/interview/rug/youcefng</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Active Topics:</span>
+                <span id="active-topics" class="value">0</span>
+            </div>
+        </div>
+
+        <!-- Topic Toggles -->
+        <div class="topic-controls">
+            <h3>📊 Select Topics to Display</h3>
+            <div id="topic-toggles" class="toggles">
+                <!-- Toggles added dynamically -->
+            </div>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div id="metrics" class="metrics-grid">
+            <!-- Metric cards added dynamically -->
+        </div>
+
+        <!-- Chart Section -->
+        <div class="chart-section">
+            <div class="chart-header">
+                <h3>📈 Live Data</h3>
+                <div class="chart-controls">
+                    <button onclick="clearChart()" class="btn btn-secondary">Clear</button>
+                    <button onclick="toggleGrid()" class="btn btn-secondary">Grid</button>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="mainChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div id="stats" class="stats-grid">
+            <!-- Stats cards added dynamically -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
