@@ -2,32 +2,6 @@
 
 A real-time IoT dashboard built in Go that connects to MQTT brokers, publishes sensor data, and displays it on an interactive web interface. Includes a built-in MQTT broker for local testing.
 
-## 🚀 Quick Start
-
-### Download Pre-built Binaries
-
-| Platform | Download |
-|----------|----------|
-| Linux | [mqtt-dashboard-linux](https://github.com/YOUCEFngg/mqtt-dashboard/releases/latest/download/mqtt-dashboard-linux) |
-| Windows | [mqtt-dashboard-windows.exe](https://github.com/YOUCEFngg/mqtt-dashboard/releases/latest/download/mqtt-dashboard-windows.exe) |
-| Mac | [mqtt-dashboard-mac](https://github.com/YOUCEFngg/mqtt-dashboard/releases/latest/download/mqtt-dashboard-mac) |
-
-> **Note:** After downloading, make executable: `chmod +x mqtt-dashboard-linux`
-
-### Run
-
-```bash
-# Linux/Mac
-./mqtt-dashboard-linux
-
-# Windows
-mqtt-dashboard-windows.exe
-```
-
-Open browser: `http://localhost:8081`
-
----
-
 ## Features
 
 - **MQTT Client**: Connects to HiveMQ public broker
@@ -125,7 +99,7 @@ rmbtech/interview/rug/NegadYoucef/sensors/humidity
 rmbtech/interview/rug/NegadYoucef/sensors/pressure
 ```
 
-## How to Build from Source
+## How to Use
 
 ### Prerequisites
 
@@ -140,23 +114,10 @@ cd mqtt-dashboard
 go mod tidy
 ```
 
-### Build
+### Run the Application
 
 ```bash
-# Linux
-go build -o mqtt-dashboard-linux cmd/dashboard/main.go
-
-# Windows
-GOOS=windows GOARCH=amd64 go build -o mqtt-dashboard-windows.exe cmd/dashboard/main.go
-
-# Mac
-GOOS=darwin GOARCH=amd64 go build -o mqtt-dashboard-mac cmd/dashboard/main.go
-```
-
-### Run
-
-```bash
-./mqtt-dashboard-linux
+go run cmd/dashboard/main.go
 ```
 
 Open browser: `http://localhost:8081`
